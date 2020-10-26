@@ -166,10 +166,9 @@ section {
 
 #primary-nav li a {
   color: #121212;
-  font-weight: bold;
   line-height: 100px;
   padding: 0px 15px;
-  font-size: 15px;
+  font-size: 1.4rem;
   font-weight: 400;
   transition: all 0.5s;
 }
@@ -679,19 +678,19 @@ section.our-services .service-item h4 {
   margin-top: 60px;
   padding-top: 60px;
 }
-.accordion li {
+.accordian2 li {
   position: relative;
 }
-.accordion li a {
+.accordian2 li a {
   border: 1px solid #ddd;
 }
-.accordion li:last-child a {
+.accordian2 li:last-child a {
   
 }
-.accordion li p {
+.accordian2 li p {
   display: none;
 }
-.accordion a {
+.accordian2 a {
   width: 100%;
   display: block;
   cursor: pointer;
@@ -703,7 +702,26 @@ section.our-services .service-item h4 {
   padding: 15px 20px;
   text-decoration: none;
 }
-.accordion a:after {
+
+.accordionText button{
+  font-weight: 600;
+  font-size: 17px;
+  color: #4a4a4a;
+}
+.accordionText button:hover{
+  font-weight: 600;
+  font-size: 17px;
+  color: #4a4a4a;
+  /* text-decoration: none; */
+}
+
+
+
+.card-body {
+  font-size: 12px;
+}
+
+.accordian2 a:after {
   width: 15px;
   height: 15px;
   background-color: #ddd;
@@ -717,7 +735,7 @@ section.our-services .service-item h4 {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.accordion p {
+.accordian2 p {
   margin: 0px;
   padding: 20px;
   border: 1px solid #ddd;
