@@ -82,10 +82,10 @@
                                         </li>
                                     </ul> -->
                                 </li>
-                                <li><a class="scrollTo" data-scrollTo="blog" href="#">Administration</a></li>
-                                <li><a class="scrollTo" data-scrollTo="services" href="#">Programs</a></li>
-                                <li><a class="scrollTo" data-scrollTo="contact" href="#">Testimonials</a></li>
-                                <li><a class="scrollTo" data-scrollTo="contact" href="#">Contact Us</a></li>
+                                <li><a class="scrollTo" data-scrollTo="" href="#">Administration</a></li>
+                                <li><a class="scrollTo" data-scrollTo="" href="#">Programs</a></li>
+                                <li><a class="scrollTo" data-scrollTo="services" href="#">Testimonials</a></li>
+                                <li><a class="scrollTo" data-scrollTo="contactDetails" href="#">Contact Us</a></li>
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>
@@ -117,10 +117,10 @@
                                         <div class="left-content">
                                             <div class="row">
                                                 <!-- <div class="col-md-12"> -->
-                                                    <div id="modalTitle">
-                                                        <span style="color: #3F3D56;">Contribute for a good cause</span>
-                                                        <h2 style="color: #6C63FF;">Pay using UPI</h2>
-                                                    </div>
+                                                <div id="modalTitle">
+                                                    <span style="color: #3F3D56;">Contribute for a good cause</span>
+                                                    <h2 style="color: #6C63FF;">Pay using UPI</h2>
+                                                </div>
                                                 <!-- </div> -->
                                                 <div class="col-md-12">
                                                     <img class="modal-illustration img-fluid" src="/img/shantighar.svg">
@@ -133,7 +133,7 @@
                                                             placeholder="Your name..." required="">
                                                     </fieldset>
                                                 </div> -->
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -143,21 +143,27 @@
                                                 <div class="col-md-12">
                                                     <div class="modalTitle">
                                                         <!-- <div class="section-heading"> -->
-                                                            <h2 style="font-size: 30px;">How you can donate</h2>
-                                                            <!-- <h2>Venue Company</h2> -->
+                                                        <h2 style="font-size: 30px;">How you can donate</h2>
+                                                        <!-- <h2>Venue Company</h2> -->
                                                         <!-- </div> -->
-                                                        <p>All Donations are 50% Tax Exempt under section 80G of IT Act, 1961.</p>
+                                                        <p>All Donations are 50% Tax Exempt under section 80G of IT Act,
+                                                            1961.</p>
                                                         <ul class="donationMethods">
-                                                            <li><span>Shantighar PAN NO:</span><a href="#">010ABC0550</a></li>
+                                                            <li><span>Shantighar PAN NO:</span><a
+                                                                    href="#">010ABC0550</a></li>
                                                             <li><span>Account No:</span><a href="#">1234567890</a></li>
                                                             <li><span>Bank:</span><a href="#">Some Bank</a></li>
                                                             <li><span>IFSC Code:</span><a href="#">BANK123456</a></li>
                                                         </ul> <br><br>
                                                         <h3>For Queries, Contact:</h3>
                                                         <ul>
-                                                            <li><span>Phone:</span><a >+91 90045 31321/+91 91674 93574</a></li>
-                                                            <li><span>Email:</span><a >shantigharhelpline@gmail.com</a></li>
-                                                            <li><span>Address:</span><a>11, DP Road, MIDC, near R C Maruti High School, Subhash Nagar, Andheri East, Mumbai, Maharashtra 400093</a></li>
+                                                            <li><span>Phone:</span><a>+91 90045 31321/+91 91674
+                                                                    93574</a></li>
+                                                            <li><span>Email:</span><a>shantigharhelpline@gmail.com</a>
+                                                            </li>
+                                                            <li><span>Address:</span><a>11, DP Road, MIDC, near R C
+                                                                    Maruti High School, Subhash Nagar, Andheri East,
+                                                                    Mumbai, Maharashtra 400093</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -398,7 +404,7 @@
                                             <!-- <img src="img/service_icon_3.png" alt=""> -->
                                             <i class="fa fa-user-circle-o" style="font-size:70px;color:#4A84FF"></i>
                                         </div>
-                                        <h4>Best HTML CSS Layout</h4>
+                                        <h4>First Card</h4>
                                         <p>Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus
                                             leo, quis
                                             viverra purus condimentum nec.</p>
@@ -468,7 +474,7 @@
                                             <!-- <img src="img/service_icon_3.png" alt=""> -->
                                             <i class="fa fa-user-circle-o" style="font-size:70px;color:#4A84FF"></i>
                                         </div>
-                                        <h4>Best HTML CSS Layout</h4>
+                                        <h4>Last Card</h4>
                                         <p>Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus
                                             leo, quis
                                             viverra purus condimentum nec.</p>
@@ -648,7 +654,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-info">
-                        <div class="footer-heading">
+                        <div class="footer-heading" id="contactDetails">
                             <h4>Contact Information</h4>
                         </div>
 
@@ -685,19 +691,28 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 
 
+
     <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
     <script>
         var swiper = new Swiper('.swiper-container', {
+            cssMode: true,
             slidesPerView: 1,
+            loop: true,
             spaceBetween: 10,
             // init: false,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: true,
             },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
             breakpoints: {
                 500: {
                     slidesPerView: 1,
@@ -709,11 +724,11 @@
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 40,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 3,
-                    spaceBetween: 50,
+                    spaceBetween: 40,
                 },
             }
         });
