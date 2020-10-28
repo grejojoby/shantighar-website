@@ -1256,7 +1256,7 @@ footer .contact-info ul li a {
 }
 
 .titleImage {
-  background-image: url('/img/main_banner.jpg');
+  background-image: url('img/main_banner.jpg');
   padding: 10% 0;
 }
 .titleImage h1 {
