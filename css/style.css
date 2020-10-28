@@ -1238,3 +1238,29 @@ footer .contact-info ul li a {
     margin-top: 60px;
   }
 }
+
+.modal-illustration {
+  width: 75%;
+  margin: 0 10%;
+}
+
+#modalTitle {
+  padding-left: 6%;
+}
+
+#modalTitle h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+}
+
+.titleImage {
+  background-image: url('/img/main_banner.jpg');
+  padding: 10% 0;
+}
+.titleImage h1 {
+  font-size: 3.5rem;
+  color: #ccc;
+  text-shadow: 5px 5px 10px #333333;
+}
