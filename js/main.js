@@ -7,13 +7,17 @@ jQuery(document).ready(function($) {
           // Vars
           var modBtn  = $('#modBtn'),
               modal   = $('#modal'),
+              wrap   = $('#header'),
               close   = modal.find('.close'),
               modContent = modal.find('.modal-content');
           
           // open modal when click on open modal button 
           modBtn.on('click', function() {
+            wrap.css('display','none');
             modal.css('display', 'block');
+            modal.css('z-index', '1000');
             modContent.removeClass('modal-animated-out').addClass('modal-animated-in');
+            
           });
           
           // close modal when click on close button or somewhere out the modal content 
@@ -22,6 +26,7 @@ jQuery(document).ready(function($) {
             if(target.is(modal) || target.is(close)) {
               modContent.removeClass('modal-animated-in').addClass('modal-animated-out').delay(300).queue(function(next) {
                 modal.css('display', 'none');
+                wrap.css('display','');
                 next();
               });
             }
