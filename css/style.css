@@ -6,7 +6,8 @@ body {
 #banner__image {
   position: relative;
   top: 50%;
-  left: 35%;
+  /* align-items: center; */
+  left: 15%;
   margin-top: 10px;
   display: inline;
   transition: display 1s ease-in-out;
