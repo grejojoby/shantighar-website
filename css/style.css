@@ -7,7 +7,7 @@ body {
   position: relative;
   top: 50%;
   /* align-items: center; */
-  left: 15%;
+  left: 35%;
   margin-top: 10px;
   display: inline;
   transition: display 1s ease-in-out;
@@ -224,7 +224,7 @@ section {
 }
 
 #header .logo img {
-  width: 100%;
+  width: 80%;
   overflow: hidden;
 }
 
@@ -1431,4 +1431,14 @@ footer .contact-info ul li a {
   max-width: 100%;
   max-height: 100%;
   display: block;
+}
+.testimonial-piils li a {
+  font-size: 16px;
+} #contactTable a{
+  text-decoration: none;
+  color: #007bff;
+}
+#contactTable a:hover{
+  text-decoration: none;
+  color: #df4c73;
 }
