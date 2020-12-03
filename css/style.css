@@ -111,7 +111,7 @@ section {
   font-size: 20px;
   display: block;
   margin: 0px;
-  color: #4883ff;
+  color: #df4c73;
   margin-bottom: 20px;
 }
 
@@ -124,21 +124,32 @@ section {
   letter-spacing: 0.5px;
 }
 
+.section-heading h2:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 100px; /* Change this to whatever width you want. */
+  padding-top: 10px;
+  /* padding-bottom: 10px;  */
+  border-bottom: 3px solid #df4c73; /* This creates the border. Replace black with whatever color you want. */
+  margin-bottom: 20px;
+}
+
 .blue-button a {
   display: inline-block;
-  background-color: #4883ff;
+  background-color: #df4c73;
   color: #fff;
   font-size: 15px;
   font-weight: 500;
   padding: 10px 16px;
   text-decoration: none;
-  border: 2px solid #4883ff;
+  border: 2px solid #df4c73;
   transition: all 0.5s;
 }
 
 .blue-button a:hover {
   background-color: transparent;
-  color: #4883ff;
+  color: #df4c73;
 }
 
 /* Header Style */
@@ -412,7 +423,7 @@ section.banner {
 .banner .banner-caption .line-dec {
   width: 80px;
   height: 3px;
-  background-color: #4883ff;
+  background-color: #df4c73;
 }
 
 .banner .banner-caption h2 {
@@ -661,7 +672,10 @@ section.featured-places {
   border-bottom-right-radius: 5px;
 }
 .featured-places .featured-item .down-content-2 {
-  background-color: #007bff;
+  /* background-color: #007bff; */
+  /* background-color: #501b1d; */
+  background-color: #df4c73;
+  /* background-color: #A52D01; */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   padding: 10px 10px 10px 10px;
   border-bottom-left-radius: 5px;
@@ -1170,6 +1184,7 @@ section.contact .section-heading {
 footer {
   /* margin-top: 80px; */
   padding: 30px 0px 30px 0px;
+  background-color: #f4f4f4;
   /* border-top: 1px solid #ddd; */
 }
 
@@ -1374,7 +1389,9 @@ footer .contact-info ul li a {
   position: fixed;
   height: 100%;
   z-index: 1000;
-  background-color: rgba(81, 152, 191, 0.3);
+  /* background-color: rgba(81, 152, 191, 0.3); */
+  /* background-color: #FADCA2; */
+  background-color: #e2f0f9;
   padding-right: 0;
   padding-left: 0;
   font-size: 1.5rem;
@@ -1390,4 +1407,28 @@ footer .contact-info ul li a {
 .sidebar a:hover {
   color: #374955;
   font-weight: 600;
+}
+
+.para {
+  font-size: 1.6rem;
+  color: #4a4a4a;
+}
+.top-border-design {
+  border-top: 3px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.display-4 {
+  color: #df4c73;
+  font-size: 26px;
+}
+.activity-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
