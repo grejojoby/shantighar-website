@@ -685,7 +685,7 @@ section.featured-places {
   border-top-right-radius: 5px;
   text-align: center;
   margin-bottom: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .featured-places .featured-item .down-content h4 {
