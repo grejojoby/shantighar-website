@@ -37,7 +37,7 @@
 <body>
 
     <div class="wrap sticky-top">
-        <header id="header">
+        <header id="header" style="max-width: 100vw;">
             <div class="container">
                 <div class="row ImageTopClass" id="ImageTop">
                     <div class="col-md-12">
@@ -57,8 +57,9 @@
         <div class="col-md-2 col-12 sidebar nav flex-column nav-pills" id="v-pills-tab" role="tablist"
             aria-orientation="vertical">
             <!-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"> -->
-            <a href="javascript:ToggleNav()" id="closeBtnNav"><i
-                    class="fa fa-close" aria-hidden="true" style="font-size: 5rem;z-index:1000;"></i></a>
+            <a id="closeBtnNavB" href="javascript:ToggleNav()"
+                style="position: absolute;display: none;width:0px ;right:70px;padding: 0;"><i class="fa fa-close"
+                    aria-hidden="true" style="font-size: 5rem;z-index:1000;"></i></a>
             <a class="nav-link active" onclick="ToggleNav()" id="v-pills-home-tab" data-toggle="pill"
                 href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
             <a class="nav-link" onclick="ToggleNav()" onclick="ToggleNav()" id="v-pills-about-tab" data-toggle="pill"
@@ -85,15 +86,17 @@
                 Support</a>
             <!-- </div> -->
         </div>
-        <div class="col-md-10 col-12 offset-2" style="padding: 0;" id="test">
+        <div class="col-md-10 col-12 offset-2" style="padding: 0;max-width:100vw ;" id="test">
             <script>
                 var nav = document.getElementById('v-pills-tab');
                 if (screen.width < 600) {
-                    document.getElementById('closeBtnNav').style.display = "block";
+                    document.getElementById('closeBtnNavB').style.display = "block";
                     var element = document.getElementById("test");
                     element.classList.remove("offset-2");
-                    element.style.marginLeft = "1rem";
+                    element.style.marginLeft = "2rem";
                     nav.classList.toggle('MainHiddenNav');
+                    nav.style.maxWidth = "100%";
+                    nav.style.overflow = "none";
 
                 };
                 function ToggleNav() {
@@ -102,21 +105,32 @@
                         nav.classList.toggle('MainHiddenNav');
                     }
                 }
+                // ToggleNav();
             </script>
 
             <style>
+                .test {
+                    width: 100vw;
+                    padding: 0;
+                    margin: 0
+                }
+
                 .MainHiddenNav {
                     display: none;
                 }
-            </style>
-            <a href="javascript:ToggleNav()" id="closeBtnOutside"><i
-                    class="fa fa-bars" aria-hidden="true" style="font-size: 5rem;z-index:100;"></i></a>
 
-            <div class="tab-content" id="v-pills-tabContent">
+                .container {
+                    overflow: hidden;
+                }
+            </style>
+            <a href="javascript:ToggleNav()" id="closeBtnOutside"><i class="fa fa-bars" aria-hidden="true"
+                    style="font-size: 5rem;z-index:100;"></i></a>
+
+            <div class="tab-content" id="v-pills-tabContent" style="max-width: 100vw;">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                     aria-labelledby="v-pills-home-tab">
                     <section class="featured-places" id="blog"
-                        style="margin-top: 0; padding-top: 50px; padding-bottom: 50px !important;">
+                        style="margin-top: 0; padding-top: 50px; padding-bottom: 50px !important;max-width: 100vw;">
                         <div class="container" style="width:90%">
                             <div class="row">
                                 <div class="col-md-12" style="height: 80px;">
@@ -628,8 +642,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                         <!-- <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
                             href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p> -->
                     </div>
@@ -778,8 +793,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
 
@@ -915,8 +931,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
 
@@ -1057,8 +1074,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
 
@@ -1236,8 +1254,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
 
                 </div>
@@ -1317,8 +1336,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
 
@@ -1568,8 +1588,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-whs" role="tabpanel" aria-labelledby="v-pills-whs-tab">
@@ -1660,8 +1681,9 @@
                     </footer> -->
 
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
@@ -1867,8 +1889,9 @@
                         </div>
                     </footer> -->
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby, Hayden Cordeiro, Pakshal Ranawat <br> <a
-                            href="http://comps.dbit.in/">Dept. of Computer Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
+                        <p>Copyright &copy; 2020 <a href="index.html">Shantighar, Andheri</a> | Website By: Grejo Joby,
+                            Hayden Cordeiro, Pakshal Ranawat <br> <a href="http://comps.dbit.in/">Dept. of Computer
+                                Engineering, Don Bosco Institute of Technology, Mumbai</a></p>
                     </div>
                 </div>
 
