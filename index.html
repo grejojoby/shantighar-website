@@ -53,30 +53,66 @@
         </header>
     </div>
     <div class="row">
+
         <div class="col-md-2 col-12 sidebar nav flex-column nav-pills" id="v-pills-tab" role="tablist"
             aria-orientation="vertical">
             <!-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"> -->
-            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                aria-controls="v-pills-home" aria-selected="true">Home</a>
-            <a class="nav-link" id="v-pills-about-tab" data-toggle="pill" href="#v-pills-about" role="tab"
-                aria-controls="v-pills-about" aria-selected="false">About Us</a>
-            <a class="nav-link" id="v-pills-activity-tab" data-toggle="pill" href="#v-pills-activity" role="tab"
-                aria-controls="v-pills-activity" aria-selected="false">Activities</a>
-            <a class="nav-link" id="v-pills-programmes-tab" data-toggle="pill" href="#v-pills-programmes" role="tab"
-                aria-controls="v-pills-programmes" aria-selected="false">Programmes</a>
-            <a class="nav-link" id="v-pills-administration-tab" data-toggle="pill" href="#v-pills-administration"
-                role="tab" aria-controls="v-pills-administration" aria-selected="false">Administration</a>
-            <a class="nav-link" id="v-pills-admission-tab" data-toggle="pill" href="#v-pills-admission" role="tab"
-                aria-controls="v-pills-admission" aria-selected="false">Admission</a>
-            <a class="nav-link" id="v-pills-testimonials-tab" data-toggle="pill" href="#v-pills-testimonials" role="tab"
-                aria-controls="v-pills-testimonials" aria-selected="false">Testimonials</a>
-            <a class="nav-link" id="v-pills-whs-tab" data-toggle="pill" href="#v-pills-whs" role="tab"
-                aria-controls="v-pills-whs" aria-selected="false">WHS</a>
-            <a class="nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-contact" role="tab"
-                aria-controls="v-pills-contact" aria-selected="false">Donate & Support</a>
+            <a href="javascript:ToggleNav()" id="closeBtnNav"
+                style="display:none;position: fixed;right: 40px;margin-top:1rem;z-index:100; background-color: white;padding:1rem 1rem; border-radius: 50%;"><i
+                    class="fa fa-window-close" aria-hidden="true" style="font-size: 5rem;z-index:1000;"></i></a>
+            <a class="nav-link active" onclick="ToggleNav()" id="v-pills-home-tab" data-toggle="pill"
+                href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+            <a class="nav-link" onclick="ToggleNav()" onclick="ToggleNav()" id="v-pills-about-tab" data-toggle="pill"
+                href="#v-pills-about" role="tab" aria-controls="v-pills-about" aria-selected="false">About Us</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-activity-tab" data-toggle="pill"
+                href="#v-pills-activity" role="tab" aria-controls="v-pills-activity"
+                aria-selected="false">Activities</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-programmes-tab" data-toggle="pill"
+                href="#v-pills-programmes" role="tab" aria-controls="v-pills-programmes"
+                aria-selected="false">Programmes</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-administration-tab" data-toggle="pill"
+                href="#v-pills-administration" role="tab" aria-controls="v-pills-administration"
+                aria-selected="false">Administration</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-admission-tab" data-toggle="pill"
+                href="#v-pills-admission" role="tab" aria-controls="v-pills-admission"
+                aria-selected="false">Admission</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-testimonials-tab" data-toggle="pill"
+                href="#v-pills-testimonials" role="tab" aria-controls="v-pills-testimonials"
+                aria-selected="false">Testimonials</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-whs-tab" data-toggle="pill" href="#v-pills-whs"
+                role="tab" aria-controls="v-pills-whs" aria-selected="false">WHS</a>
+            <a class="nav-link" onclick="ToggleNav()" id="v-pills-contact-tab" data-toggle="pill"
+                href="#v-pills-contact" role="tab" aria-controls="v-pills-contact" aria-selected="false">Contact Us</a>
             <!-- </div> -->
         </div>
-        <div class="col-md-10 col-12 offset-2" style="padding: 0;">
+        <div class="col-md-10 col-12 offset-2" style="padding: 0;" id="test">
+            <script>
+                var nav = document.getElementById('v-pills-tab');
+                if (screen.width < 600) {
+                    document.getElementById('closeBtnNav').style.display = "block";
+                    var element = document.getElementById("test");
+                    element.classList.remove("offset-2");
+                    element.style.marginLeft = "1rem";
+                    nav.classList.toggle('MainHiddenNav');
+
+                };
+                function ToggleNav() {
+                    // console.log(nav);
+                    if (screen.width < 600) {
+                        nav.classList.toggle('MainHiddenNav');
+                    }
+                }
+            </script>
+
+            <style>
+                .MainHiddenNav {
+                    display: none;
+                }
+            </style>
+            <a href="javascript:ToggleNav()"
+                style="position: fixed;left: 0px;margin-top:1rem;z-index:100; background-color: white;padding:1rem 1rem; border-radius: 50%;"><i
+                    class="fa fa-bars" aria-hidden="true" style="font-size: 5rem;z-index:100;"></i></a>
+
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                     aria-labelledby="v-pills-home-tab">
@@ -493,9 +529,9 @@
                                                                         </li>
                                                                         <li><span>Account No:</span><a
                                                                                 href="#">033903692378190001</a></li> -->
-                                                                        <!-- <li><span>Bank:</span><a href="#">Some Bank</a>
+                    <!-- <li><span>Bank:</span><a href="#">Some Bank</a>
                                                                         </li> -->
-                                                                        <!-- <li><span>IFSC Code:</span><a
+                    <!-- <li><span>IFSC Code:</span><a
                                                                                 href="#">CSBK0000339</a></li>
                                                                     </ul> <br>
                                                                     <h3>For Queries, Contact:</h3>

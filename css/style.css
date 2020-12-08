@@ -1403,7 +1403,10 @@ footer .contact-info ul li a {
 
 .sidebar a {
   color: #111;
-  padding: 2rem;
+  padding: 0rem;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  width: 100%;
   padding-left: 35px;
   font-size: 1.4rem;
 }
@@ -1437,11 +1440,12 @@ footer .contact-info ul li a {
 }
 .testimonial-piils li a {
   font-size: 16px;
-} #contactTable a{
+}
+#contactTable a {
   text-decoration: none;
   color: #007bff;
 }
-#contactTable a:hover{
+#contactTable a:hover {
   text-decoration: none;
   color: #df4c73;
 }
