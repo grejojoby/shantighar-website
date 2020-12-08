@@ -1410,11 +1410,11 @@ footer .contact-info ul li a {
 .sidebar a {
   color: #111;
   padding: 0rem;
-  padding-top: 2.5vh;
-  padding-bottom: 2.5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   width: 100%;
   padding-left: 35px;
-  font-size: 1.4rem;
+  font-size: 1.9vh;
 }
 .sidebar a:hover {
   color: #374955;
