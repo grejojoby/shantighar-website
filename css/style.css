@@ -14,6 +14,13 @@ body {
   display: inline;
   transition: display 1s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  #banner__image {
+    margin-left: 12%;
+  }
+}
+
 .bc {
   background-color: #fffaff;
 }
@@ -202,7 +209,7 @@ section {
   overflow: visible;
   position: relative;
   
-   background-color: #F5FCFA;
+  background-color: #F5FCFA;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   width: 105%;
 }
