@@ -15,6 +15,10 @@
   <loc>http://shantigharandheri.com/index.html</loc>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>http://shantigharandheri.com/contributors.html</loc>
+  <priority>0.80</priority>
+</url>
 
 
 </urlset>
